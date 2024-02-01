@@ -1,18 +1,27 @@
 :root {
   --smoky-black: hsl(0, 0%, 7%);
+
+  --eerie-black-1: hsl(240, 2%, 13%);
   --eerie-black-2: hsl(240, 2%, 12%);
 
   --onyx: hsl(240, 1%, 17%);
   --jet: hsl(0, 0%, 22%);
+
   --light-gray: hsl(0, 0%, 84%);
+  --light-gray-70: hsla(0, 0%, 84%, 0.7);
 
   --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+  --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
 
   --shadow-v1: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+  --shadow-v2: -4px 8px 24px hsla(0, 0%, 0%, 0.125);
+
+
 
   /* colors  */
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
+  --orange-yellow-crayola: hsl(45, 100%, 72%);
 
   /* fonts  */
   --ff-poppins: 'Poppins', sans-serif;
@@ -75,11 +84,38 @@ body {
   display: inline-block;
 }
 
+.boxV1 {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  font-size: 18px;
+  background: var(--border-gradient-onyx);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange-yellow-crayola);
+  box-shadow: var(--shadow-v2);
+  position: relative;
+}
+
+.boxV1::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--eerie-black-1);
+  border-radius: 12px;
+}
+
 .divider {
   margin: 32px 0;
   width: 100%;
   height: 1px;
   background: var(--jet);
+}
+
+.divider:last-of-type {
+  margin: 15px 0;
+  opacity: 0;
 }
 
 .main-wrapper {
@@ -134,11 +170,66 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 16px;
-
+  padding-left: 0;
 }
 
 .contactsListwrap>li {
   display: flex;
   align-items: center;
   gap: 1rem;
+  min-width: 100%;
+}
+
+
+.contactsListwrap>li .contact-info {
+  max-width: calc(100% - 64px);
+}
+
+.contact-info :is(.contact-title, time, address) {
+  --fs-7: 14px;
+  font-weight: 300;
+  font-size: var(--fs-7);
+  color: var(--white-2);
+}
+
+.contact-info address {
+  font-style: normal;
+
+}
+
+.contactsListwrap>li .contact-title {
+  margin-bottom: 0;
+  color: var(--light-gray-70);
+  font-size: var(--fs-8);
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.contactsListwrap>li .contact-link {
+  font-size: var(--fs-7);
+  font-weight: 300;
+  color: var(--white-2);
+  --fs-7: 14px;
+  text-decoration: none;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+.socialLinksList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  padding-bottom: 4px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.socialLink {
+  color: var(--light-gray-70);
+  font-size: 18px;
+
 }
