@@ -1,0 +1,144 @@
+:root {
+  --smoky-black: hsl(0, 0%, 7%);
+  --eerie-black-2: hsl(240, 2%, 12%);
+
+  --onyx: hsl(240, 1%, 17%);
+  --jet: hsl(0, 0%, 22%);
+  --light-gray: hsl(0, 0%, 84%);
+
+  --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+
+  --shadow-v1: 0 24px 80px hsla(0, 0%, 0%, 0.25);
+
+  /* colors  */
+  --white-1: hsl(0, 0%, 100%);
+  --white-2: hsl(0, 0%, 98%);
+
+  /* fonts  */
+  --ff-poppins: 'Poppins', sans-serif;
+}
+
+@media (min-width: 580px) {
+  :root {
+    --fs-1: 32px;
+    --fs-2: 24px;
+    --fs-3: 26px;
+    --fs-4: 18px;
+    --fs-6: 15px;
+    --fs-7: 15px;
+    --fs-8: 12px;
+  }
+}
+
+
+img {
+  display: block;
+}
+
+html {
+  font-family: var(--ff-poppins);
+}
+
+body {
+  margin: 0;
+  background-color: var(--smoky-black);
+  color: var(--light-gray)
+}
+
+.avatar-box {
+  background: var(--bg-gradient-onyx);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1/1;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.avatar-box img {
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+.badgeV1 {
+  color: var(--white-1);
+  background: var(--onyx);
+  font-size: var(--fs-8);
+  font-weight: 300;
+  width: max-content;
+  padding: 3px 12px;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.divider {
+  margin: 32px 0;
+  width: 100%;
+  height: 1px;
+  background: var(--jet);
+}
+
+.main-wrapper {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  margin-top: 60px;
+}
+
+.main-wrapper .profile-sidebar,
+.main-wrapper .main-content {
+  box-shadow: var(--shadow-v1);
+  background-color: var(--eerie-black-2);
+  border: 1px solid var(--jet);
+  border-radius: 20px;
+}
+
+.main-wrapper .profile-sidebar {
+  grid-column: span 3 / span 3;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 60px;
+}
+
+.main-wrapper .profile-sidebar h1 {
+  margin-bottom: 15px;
+  color: var(--white-2);
+  font-size: var(--fs-3);
+  font-weight: 500;
+  letter-spacing: -0.25px;
+  margin-bottom: 10px;
+}
+
+.main-wrapper .profile-sidebar .profile-sidebar-top {
+  text-align: center;
+}
+
+.main-wrapper .profile-sidebar h1 .badgeV1 {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-wrapper .main-content {
+  grid-column: span 9 / span 9;
+}
+
+.contactsListwrap {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+
+}
+
+.contactsListwrap>li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
