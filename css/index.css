@@ -11,6 +11,8 @@
   --light-gray-70: hsla(0, 0%, 84%, 0.7);
 
   --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
+  --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+
   --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
 
   --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
@@ -46,6 +48,9 @@
   }
 }
 
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-family: var(--ff-poppins);
@@ -350,6 +355,10 @@ h2 {
   color: var(--light-gray-70);
 }
 
+section {
+  animation: fade 0.5s ease both;
+}
+
 section h2 {
   margin-top: 0;
   margin-bottom: 20px;
@@ -366,4 +375,69 @@ section h2::before {
   height: 5px;
   border-radius: 3px;
   background-image: var(--text-gradient-yellow);
+}
+
+.aboutMeContent {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.serviceContent {}
+
+.serviceContent .serviceTitle {
+  margin-bottom: 20px;
+  font-size: var(--fs-2);
+  color: var(--white-2);
+  margin-top: 0;
+}
+
+.servicesList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px 25px;
+  padding: 0;
+}
+
+.servicesList>.servicesListItem {
+  display: flex;
+  gap: 18px;
+  padding: 30px;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-v3);
+  position: relative;
+  z-index: 1;
+}
+
+.servicesList>.servicesListItem::before {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.servicesList>.servicesListItem .serviceContentBox h4 {
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-size: var(--fs-4);
+  color: var(--white-2);
+  text-transform: capitalize;
+}
+
+.servicesList>.servicesListItem .serviceContentBox p {
+  margin: 0;
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.hide {
+  display: none;
+  pointer-events: none;
 }
