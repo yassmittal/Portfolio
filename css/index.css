@@ -550,10 +550,49 @@ section h2::before {
 }
 
 .skillsList {
+  margin: 0;
   padding: 20px 30px 30px 30px;
+  list-style-type: none;
 }
 
-.skillsList>.skillsItem {}
+.skillsList>.skillsItem:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.skillsList>.skillsItem .title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.skillsList>.skillsItem .title-wrapper h5 {
+  font-size: var(--fs-7);
+  font-weight: 500;
+  color: var(--white-2);
+  margin: 0;
+}
+
+.skillsList>.skillsItem .title-wrapper data {
+  color: var(--light-gray);
+  font-size: var(--fs-7);
+  font-weight: 300;
+}
+
+.progressBarWrap {
+  background: var(--jet);
+  width: 100%;
+  height: 8px;
+  border-radius: 10px;
+}
+
+.progressBarWrap .progressBarContent {
+  background: var(--text-gradient-yellow);
+  height: 100%;
+  border-radius: inherit;
+}
+
+
 
 @keyframes fade {
   0% {
