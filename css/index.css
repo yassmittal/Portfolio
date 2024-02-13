@@ -27,6 +27,7 @@
   --white-1: hsl(0, 0%, 100%);
   --white-2: hsl(0, 0%, 98%);
   --orange-yellow-crayola: hsl(45, 100%, 72%);
+  --vegas-gold: hsl(45, 54%, 58%);
 
   /* fonts  */
   --ff-poppins: 'Poppins', sans-serif;
@@ -184,6 +185,23 @@ h2 {
   border-radius: 12px;
 }
 
+.boxV2 {
+  position: relative;
+  background: var(--border-gradient-onyx);
+  border-radius: 14px;
+  box-shadow: var(--shadow-v3);
+  z-index: 1;
+}
+
+.boxV2::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  background: var(--bg-gradient-jet);
+  border-radius: inherit;
+  z-index: -1;
+}
+
 .divider {
   margin: 32px 0;
   width: 100%;
@@ -328,6 +346,7 @@ h2 {
   border: 1px solid var(--jet);
   border-radius: 0 12px 0 12px;
   box-shadow: var(--shadow-v3);
+  z-index: 1;
 }
 
 .navBarList {
@@ -357,6 +376,11 @@ h2 {
 
 section {
   animation: fade 0.5s ease both;
+  display: none;
+}
+
+section.visible {
+  display: block;
 }
 
 section h2 {
@@ -440,4 +464,104 @@ section h2::before {
 .hide {
   display: none;
   pointer-events: none;
+}
+
+.timeline {
+  margin-bottom: 30px;
+}
+
+.timeline .timeline-title-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.timeline .timeline-title-wrapper h3 {
+  margin: 0;
+  color: var(--white-2);
+  font-size: var(--fs-2);
+}
+
+.timeline-list {
+  list-style: none;
+  margin: 0 0 0 65px;
+  padding: 0;
+}
+
+.timeline-list .timeline-list-item {
+  position: relative;
+}
+
+.timeline-list .timeline-list-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: -40px;
+  top: -25px;
+  width: 1px;
+  height: calc(100% + 50px);
+  background: var(--jet);
+}
+
+.timeline-list .timeline-list-item::after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  left: -43.5px;
+  top: 5px;
+  background: var(--text-gradient-yellow);
+  box-shadow: 0 0 0 4px var(--jet);
+}
+
+.timeline-list .timeline-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.timeline-list .timeline-list-item h4 {
+  font-size: var(--fs-6);
+  line-height: 1.3;
+  margin-bottom: 7px;
+  color: var(--white-2);
+}
+
+
+.timeline-list .timeline-list-item .timeline-interval {
+  color: var(--vegas-gold);
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.timeline-list .timeline-list-item .timeline-text {
+  max-width: 700px;
+  color: var(--light-gray);
+  font-weight: 300;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.skills h3 {
+  margin-bottom: 20px;
+  font-size: var(--fs-2);
+  color: var(--white-2);
+}
+
+.skillsList {
+  padding: 20px 30px 30px 30px;
+}
+
+.skillsList>.skillsItem {}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
 }
