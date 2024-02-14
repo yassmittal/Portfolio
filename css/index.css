@@ -1,4 +1,13 @@
 :root {
+  --fs-1: 24px;
+  --fs-2: 18px;
+  --fs-3: 17px;
+  --fs-4: 16px;
+  --fs-5: 15px;
+  --fs-6: 14px;
+  --fs-7: 13px;
+  --fs-8: 11px;
+
   --smoky-black: hsl(0, 0%, 7%);
 
   --eerie-black-1: hsl(240, 2%, 13%);
@@ -592,7 +601,26 @@ section h2::before {
   border-radius: inherit;
 }
 
+.projectsTabList {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 25px;
+  padding: 0;
+  padding-left: 5px;
+  margin-bottom: 30px;
+}
 
+.projectsTabList .projectsTabListItem button {
+  color: var(--light-gray);
+  font-size: var(--fs-5);
+  transition: var(--transition-1);
+}
+
+.projectsTabList .projectsTabListItem button.active {
+  color: var(--orange-yellow-crayola);
+}
 
 @keyframes fade {
   0% {
