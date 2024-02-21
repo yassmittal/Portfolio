@@ -12,7 +12,12 @@ navBarLinks.forEach((navBarLink, index) => {
     sections.forEach((section, sectionIndex) => {
       section.classList.remove('visible');
 
+      console.log(sectionIndex)
+      console.log(index)
+      console.log(' ')
+
       if (sectionIndex === index) {
+
         section.classList.add('visible')
       }
     })
