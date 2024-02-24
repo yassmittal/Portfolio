@@ -6,8 +6,8 @@ const projects = [...document.querySelectorAll('.projectItem')];
 const projectsNum = [
   [0, 1, 2, 3, 4, 5],
   [2, 3, 4],
-  [5],
   [0, 1],
+  [5],
 ]
 
 navBarLinks.forEach((navBarLink, index) => {

@@ -236,8 +236,7 @@ h2 {
 
 .main-wrapper {
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline: auto;
   display: grid;
   align-items: start;
   gap: 25px;
