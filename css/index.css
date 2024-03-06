@@ -284,6 +284,7 @@ h2 {
 .main-wrapper .main-content {
   grid-column: span 9 / span 9;
   padding: 30px;
+  position: relative;
 }
 
 .contactsListwrap {
@@ -852,4 +853,29 @@ textarea.form-input {
     scale: 1
   }
 
+}
+
+@media screen and (max-width: 1250px) {
+  .main-wrapper {
+    display: block;
+  }
+
+  .main-wrapper .profile-sidebar {
+    grid-column: span 12 / span 12;
+    width: 100%;
+    max-width: 950px;
+    margin-inline: auto;
+    position: relative;
+  }
+
+  .profile-sidebar-top {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .avatar-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
