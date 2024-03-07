@@ -832,7 +832,34 @@ textarea.form-input {
   background: var(--bg-gradient-yellow-1);
 }
 
+.show-contants-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 15px;
+  font-size: 13px;
+  color: var(--orange-yellow-crayola);
+  background: var(--border-gradient-onyx);
+  padding: 10px;
+  box-shadow: var(--shadow-v3);
+  transition: var(--transition-1);
+  z-index: 1;
+}
 
+.show-contants-btn::before {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  border-radius: inherit;
+  background: var(--bg-gradient-jet);
+  transition: var(--transition-1);
+  z-index: -1;
+}
+
+.show-contants-btn:hover,
+.show-contants-btn:focus {
+  background: var(--bg-gradient-yellow-1);
+}
 
 @keyframes fade {
   0% {
@@ -872,6 +899,10 @@ textarea.form-input {
     display: flex;
     align-items: center;
     gap: 25px;
+  }
+
+  .main-wrapper .profile-sidebar {
+    padding-top: 30px;
   }
 
   .avatar-box {

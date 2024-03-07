@@ -3,6 +3,8 @@ const navBarLinks = document.querySelectorAll('.navBarLink');
 const projectTabBtns = document.querySelectorAll('[data-id="tab-btn"]');
 const projects = [...document.querySelectorAll('.projectItem')];
 
+const profileSidebar = document.querySelector('[data-id="profile-sidebar"]');
+
 const projectsNum = [
   [0, 1, 2, 3, 4, 5],
   [2, 3, 4],
