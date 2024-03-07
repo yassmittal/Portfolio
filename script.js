@@ -4,6 +4,7 @@ const projectTabBtns = document.querySelectorAll('[data-id="tab-btn"]');
 const projects = [...document.querySelectorAll('.projectItem')];
 
 const profileSidebar = document.querySelector('[data-id="profile-sidebar"]');
+const showContantsBtn = document.querySelector('.show-contants-btn')
 
 const projectsNum = [
   [0, 1, 2, 3, 4, 5],
@@ -51,3 +52,9 @@ projectTabBtns.forEach((projectBtn, projectBtnIndex) => {
     });
   })
 })
+
+showContantsBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  profileSidebar.classList.toggle('collapsed')
+})
+
