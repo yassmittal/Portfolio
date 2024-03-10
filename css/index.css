@@ -261,6 +261,12 @@ h2 {
   padding-top: 60px;
   position: sticky;
   top: 60px;
+  transition: 0.5s ease-in-out;
+  max-height: 1200px;
+}
+
+.main-wrapper .profile-sidebar.collapsed {
+  max-height: 212px;
 }
 
 .main-wrapper .profile-sidebar h1 {
@@ -892,7 +898,9 @@ textarea.form-input {
     width: 100%;
     max-width: 950px;
     margin-inline: auto;
-    position: relative;
+    position: static;
+    padding: 30px;
+    margin-bottom: 30px;
   }
 
   .profile-sidebar-top {
@@ -901,12 +909,15 @@ textarea.form-input {
     gap: 25px;
   }
 
-  .main-wrapper .profile-sidebar {
-    padding-top: 30px;
+  .avatar-box {
+    margin: 0;
   }
 
-  .avatar-box {
-    margin-left: 0;
-    margin-right: 0;
+  .contactsListwrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .divider {
+    display: none;
   }
 }
