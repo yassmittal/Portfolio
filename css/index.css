@@ -265,9 +265,6 @@ h2 {
   max-height: 1200px;
 }
 
-.main-wrapper .profile-sidebar.collapsed {
-  max-height: 212px;
-}
 
 .main-wrapper .profile-sidebar h1 {
   margin-bottom: 15px;
@@ -898,9 +895,14 @@ textarea.form-input {
     width: 100%;
     max-width: 950px;
     margin-inline: auto;
-    position: static;
+    position: relative;
     padding: 30px;
     margin-bottom: 30px;
+  }
+
+
+  .main-wrapper .profile-sidebar.collapsed {
+    max-height: 212px;
   }
 
   .profile-sidebar-top {
