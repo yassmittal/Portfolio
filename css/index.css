@@ -837,8 +837,8 @@ textarea.form-input {
 
 .show-contants-btn {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -30px;
+  right: -30px;
   border-radius: 0 15px;
   font-size: 13px;
   color: var(--orange-yellow-crayola);
@@ -895,9 +895,10 @@ textarea.form-input {
     width: 100%;
     max-width: 950px;
     margin-inline: auto;
-    position: relative;
+    position: static;
     padding: 30px;
     margin-bottom: 30px;
+    overflow: hidden;
   }
 
 
@@ -905,10 +906,24 @@ textarea.form-input {
     max-height: 212px;
   }
 
+  .main-wrapper .profile-sidebar .contactsListwrap,
+  .main-wrapper .profile-sidebar.collapsed .socialLinksList {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.5s ease-in-out;
+  }
+
+  .main-wrapper .profile-sidebar.collapsed .contactsListwrap,
+  .main-wrapper .profile-sidebar.collapsed .socialLinksList {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   .profile-sidebar-top {
     display: flex;
     align-items: center;
     gap: 25px;
+    position: relative;
   }
 
   .avatar-box {
@@ -921,5 +936,62 @@ textarea.form-input {
 
   .divider {
     display: none;
+  }
+
+  .main-wrapper .main-content {
+    max-width: 950px;
+    margin-inline: auto;
+  }
+}
+
+@media screen and (max-width: 1010px) {
+
+  .main-wrapper .profile-sidebar {
+    max-width: 520px;
+  }
+
+  .main-wrapper .main-content {
+    max-width: 520px;
+  }
+
+  .navBar {
+    position: fixed;
+    top: auto;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: hsla(240, 1%, 17%, 0.75);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--jet);
+    border-radius: 12px 12px 0 0;
+    box-shadow: var(--shadow-2);
+    z-index: 5;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .navBarList {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .navBarList .navBarLink {
+    --fs-8: 14px;
+  }
+
+  .servicesList {
+    grid-template-columns: 1fr;
+  }
+
+  .main-wrapper {
+    margin-bottom: 100px;
+  }
+
+  .projectList {
+    grid-template-columns: 1fr;
+  }
+
+  .projectList>.projectItem .projectImg {
+    width: 100%;
+    height: auto;
   }
 }
