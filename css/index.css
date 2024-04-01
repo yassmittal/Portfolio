@@ -994,4 +994,8 @@ textarea.form-input {
     width: 100%;
     height: auto;
   }
+
+  .input-wrapper {
+    grid-template-columns: 1fr;
+  }
 }
