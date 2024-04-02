@@ -7,8 +7,8 @@ const profileSidebar = document.querySelector('[data-id="profile-sidebar"]');
 const showContantsBtn = document.querySelector('.show-contants-btn')
 
 const projectsNum = [
-  [0, 1, 2, 3, 4, 5],
-  [2, 3, 4],
+  [0, 1, 2, 3, 4, 5, 6],
+  [3, 4, 5],
   [0, 1, 2],
   [5],
 ]
