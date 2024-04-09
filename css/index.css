@@ -1025,7 +1025,7 @@ textarea.form-input {
 
 @media screen and (max-width: 580px) {
 
-  .divider:last-of-type {
+  div.divider {
     margin: 1rem 0;
   }
 
@@ -1056,6 +1056,12 @@ textarea.form-input {
   }
 
   .main-wrapper .main-content {
-    padding: 15px 0;
+    padding: 15px;
+  }
+
+  .boxV1 {
+    width: 30px;
+    height: 30px;
+    border-radius: 8px;
   }
 }
